@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Sprouts International | Best Play School & Early Learning Center</title>
+  <meta name="description" content="Little Sprouts International Early Learning — where curious little minds grow with joy, safety, and love. CCTV-monitored classrooms, certified early educators, and play-based curriculum for ages 1.5 to 6 years.">
+  <meta name="keywords" content="play school, preschool, nursery, kindergarten, early learning, daycare, best play school near me">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION BAR
+       ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon">🌱</div>
+        <div class="logo-text">Little <span>Sprouts</span></div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#programs">Programs</a>
+        <a href="#daily-routine">Daily Life</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#contact">Contact</a>
+        <a href="#" class="nav-cta" onclick="openModal('tourModal'); return false;">Book a Visit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Admissions Open 2026–27
+        </div>
+        <h1>Where Curious Little Minds <span class="highlight">Grow With Joy</span> & Safety</h1>
+        <p class="hero-description">
+          A warm, nurturing early learning center for children ages 1.5 to 6 years. 
+          CCTV-monitored classrooms, certified educators, and a joyful play-based 
+          curriculum that builds your child's confidence, creativity, and school readiness.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary" onclick="openModal('tourModal'); return false;">
+            🏫 Book a Campus Visit
+          </a>
+          <a href="#" class="btn btn-secondary" onclick="openModal('prospectusModal'); return false;">
+            📄 Download Prospectus
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-banner.jpg" alt="Happy children learning and playing in a bright classroom at Little Sprouts International Play School">
+        <div class="hero-stat stat-1">
+          <div class="stat-icon icon-sunshine">👶</div>
+          <div class="stat-text">
+            <strong>500+</strong>
+            <span>Happy Graduates</span>
+          </div>
+        </div>
+        <div class="hero-stat stat-2">
+          <div class="stat-icon icon-mint">⭐</div>
+          <div class="stat-text">
+            <strong>4.9 / 5</strong>
+            <span>Google Reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       QUICK ADMISSION BAR
+       ═══════════════════════════════════════ -->
+  <div class="admission-bar">
+    <div class="container">
+      <div class="admission-bar-inner">
+        <h3>🎒 Quick Enquiry</h3>
+        <select id="admissionProgram">
+          <option value="" disabled selected>Select Program</option>
+          <option value="toddlers">Toddlers (1.5–2 yrs)</option>
+          <option value="playgroup">Playgroup (2–3 yrs)</option>
+          <option value="nursery">Nursery (3–4 yrs)</option>
+          <option value="kg">Junior / Senior KG (4–6 yrs)</option>
+        </select>
+        <input type="tel" placeholder="Parent's WhatsApp Number" id="admissionPhone" maxlength="10">
+        <button class="btn btn-primary" onclick="submitQuickEnquiry()">Get Free Callback 📞</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TRUST STRIP — 4 SAFETY PILLARS
+       ═══════════════════════════════════════ -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-card reveal">
+          <div class="trust-icon">📹</div>
+          <h4>100% CCTV Monitored</h4>
+          <p>Every classroom and play area covered with HD cameras. Live access available for parents.</p>
+        </div>
+        <div class="trust-card reveal">
+          <div class="trust-icon">🧸</div>
+          <h4>Child-Safe Infrastructure</h4>
+          <p>Non-toxic paint, rounded furniture, soft-fall flooring, and age-appropriate learning stations.</p>
+        </div>
+        <div class="trust-card reveal">
+          <div class="trust-icon">👩‍🏫</div>
+          <h4>Certified Early Educators</h4>
+          <p>All teachers are trained in early childhood education. 1:8 teacher-to-child ratio.</p>
+        </div>
+        <div class="trust-card reveal">
+          <div class="trust-icon">🩺</div>
+          <h4>Pediatric First-Aid Ready</h4>
+          <p>Daily sanitization protocols. First-aid trained staff. Tie-up with nearby pediatric hospital.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PROGRAMS SECTION
+       ═══════════════════════════════════════ -->
+  <section class="programs" id="programs">
+    <div class="container text-center">
+      <span class="section-badge badge-sunshine">Our Programs</span>
+      <h2 class="section-title">Nurturing Every Stage of Growth</h2>
+      <p class="section-subtitle">From a baby's first steps to school readiness, our age-appropriate programs build curiosity, confidence, and lifelong learning habits.</p>
+      
+      <div class="programs-grid">
+        <!-- Toddlers -->
+        <div class="program-card reveal">
+          <div class="program-card-image">
+            <img src="images/programs-grid.jpg" alt="Toddler doing sensory play with colorful blocks" style="object-position: 0 0;">
+            <span class="program-card-age">Age 1.5–2 yrs</span>
+          </div>
+          <div class="program-card-body">
+            <h3>🧸 Toddlers / Daycare</h3>
+            <p>Gentle settling-in routines, sensory tactile play, and soft socialization to ease separation anxiety.</p>
+            <div class="program-skills">
+              <span class="skill-tag badge-sunshine">Sensory Play</span>
+              <span class="skill-tag badge-sky">Motor Skills</span>
+              <span class="skill-tag badge-coral">Social Bonding</span>
+            </div>
+          </div>
+        </div>
+        <!-- Playgroup -->
+        <div class="program-card reveal">
+          <div class="program-card-image">
+            <img src="images/programs-grid.jpg" alt="Children doing finger painting in playgroup" style="object-position: 100% 0;">
+            <span class="program-card-age">Age 2–3 yrs</span>
+          </div>
+          <div class="program-card-body">
+            <h3>🎨 Playgroup / Pre-Nursery</h3>
+            <p>Vocabulary explosion through rhymes, color and shape recognition, music, movement, and sharing habits.</p>
+            <div class="program-skills">
+              <span class="skill-tag badge-sky">Language</span>
+              <span class="skill-tag badge-mint">Creativity</span>
+              <span class="skill-tag badge-lavender">Music & Dance</span>
+            </div>
+          </div>
+        </div>
+        <!-- Nursery -->
+        <div class="program-card reveal">
+          <div class="program-card-image">
+            <img src="images/programs-grid.jpg" alt="Nursery children learning phonics with teacher" style="object-position: 0 100%;">
+            <span class="program-card-age">Age 3–4 yrs</span>
+          </div>
+          <div class="program-card-body">
+            <h3>✏️ Nursery</h3>
+            <p>Phonics readiness, pre-math concepts, pencil grip development, storytelling, and creative arts.</p>
+            <div class="program-skills">
+              <span class="skill-tag badge-coral">Phonics</span>
+              <span class="skill-tag badge-sunshine">Pre-Math</span>
+              <span class="skill-tag badge-sky">Fine Motor</span>
+            </div>
+          </div>
+        </div>
+        <!-- KG -->
+        <div class="program-card reveal">
+          <div class="program-card-image">
+            <img src="images/programs-grid.jpg" alt="Kindergarten children doing science experiments" style="object-position: 100% 100%;">
+            <span class="program-card-age">Age 4–6 yrs</span>
+          </div>
+          <div class="program-card-body">
+            <h3>🎓 Junior & Senior KG</h3>
+            <p>Formal school readiness — reading sentences, basic math, environmental science, and stage confidence.</p>
+            <div class="program-skills">
+              <span class="skill-tag badge-mint">Reading</span>
+              <span class="skill-tag badge-lavender">Math</span>
+              <span class="skill-tag badge-sunshine">Confidence</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       WHY CHOOSE US
+       ═══════════════════════════════════════ -->
+  <section class="why-us">
+    <div class="container text-center">
+      <span class="section-badge badge-sunshine">Why Little Sprouts?</span>
+      <h2 class="section-title">What Makes Us Different</h2>
+      <p class="section-subtitle">We combine the best of research-backed play-based learning with genuine warmth and neighborhood trust.</p>
+      
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-card-icon">🧠</div>
+          <h4>Brain Gym & Sensory Play</h4>
+          <p>Neuro-stimulating activities like sand play, water play, and Montessori learning stations that wire your child's brain for lifelong curiosity.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-card-icon">❤️</div>
+          <h4>No Rote Learning</h4>
+          <p>We never force children to memorize. Instead, we build understanding through discovery, experimentation, and joyful repetition.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-card-icon">🗣️</div>
+          <h4>Language & Communication</h4>
+          <p>Daily circle time, puppet theatre, and storytelling sessions develop vocabulary, speech clarity, and social confidence.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-card-icon">🤸</div>
+          <h4>Physical Development</h4>
+          <p>Outdoor play, yoga, sandpit exploration, and balance activities build gross motor skills and healthy habits.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-card-icon">🤝</div>
+          <h4>Socio-Emotional Intelligence</h4>
+          <p>Sharing, turn-taking, empathy building, and conflict resolution are woven into every activity and interaction.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-card-icon">👩‍👧</div>
+          <h4>Parent Partnership</h4>
+          <p>Regular progress updates via WhatsApp, parent-teacher meetings, open observation days, and activity-at-home guides.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       DAILY ROUTINE TIMELINE
+       ═══════════════════════════════════════ -->
+  <section class="daily-routine" id="daily-routine">
+    <div class="container text-center">
+      <span class="section-badge badge-sky">A Day at Little Sprouts</span>
+      <h2 class="section-title">Your Child's Joyful Daily Routine</h2>
+      <p class="section-subtitle">Here is exactly what a typical day looks like. No guesswork — you'll know every moment your child is safe, happy, and learning.</p>
+    </div>
+    <div class="container">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--sunshine-light);">☀️</div>
+          <div class="timeline-content">
+            <div class="timeline-time">09:00 AM</div>
+            <h4>Warm Welcome & Free Play</h4>
+            <p>Greeted by name at the gate. Children settle in with soft toys, building blocks, or drawing — at their own pace.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--sky-light);">🎵</div>
+          <div class="timeline-content">
+            <div class="timeline-time">09:30 AM</div>
+            <h4>Circle Time, Rhymes & Morning Prayer</h4>
+            <p>Everyone gathers on the rainbow mat for action songs, greetings, and a cheerful start to the day together.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--lavender-light);">🧩</div>
+          <div class="timeline-content">
+            <div class="timeline-time">10:15 AM</div>
+            <h4>Sensory Table / Montessori Stations</h4>
+            <p>Hands-on learning — pouring, sorting, threading, sand texture exploration, and puzzles that build fine motor grip.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--mint-light);">🍎</div>
+          <div class="timeline-content">
+            <div class="timeline-time">11:00 AM</div>
+            <h4>Handwashing & Healthy Snack Time</h4>
+            <p>Supervised handwashing routine. Children eat their home-packed tiffin together while learning table manners.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--coral-light);">📚</div>
+          <div class="timeline-content">
+            <div class="timeline-time">11:30 AM</div>
+            <h4>Phonics, Storytelling & Puppet Theatre</h4>
+            <p>Age-appropriate letter sounds, picture books, and puppet shows that build vocabulary and listening comprehension.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--sunshine-light);">⛹️</div>
+          <div class="timeline-content">
+            <div class="timeline-time">12:15 PM</div>
+            <h4>Gross Motor Outdoor / Sandpit Play</h4>
+            <p>Running, climbing, balancing, and free play in the secure outdoor area. Builds strength, coordination, and happy memories.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--sky-light);">👋</div>
+          <div class="timeline-content">
+            <div class="timeline-time">12:45 PM</div>
+            <h4>Pack-up & Cheerful Goodbye Circle</h4>
+            <p>Children sing a farewell song, collect their bags, and are handed over to verified parents/guardians at the gate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       GALLERY / ACTIVITIES
+       ═══════════════════════════════════════ -->
+  <section class="gallery" id="gallery">
+    <div class="container text-center">
+      <span class="section-badge badge-coral">Life at Little Sprouts</span>
+      <h2 class="section-title">Activities & Celebrations</h2>
+      <p class="section-subtitle">Every day is an adventure. Here is a glimpse of the joyful moments your child will experience.</p>
+      
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Activities</button>
+        <button class="filter-btn" data-filter="sensory">Sensory & Messy Play</button>
+        <button class="filter-btn" data-filter="sports">Sports & Yoga</button>
+        <button class="filter-btn" data-filter="festivals">Festivals</button>
+        <button class="filter-btn" data-filter="classroom">Classroom Moments</button>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Row 1 -->
+        <div class="gallery-item reveal" data-category="sensory">
+          <img src="images/gallery-collage.jpg" alt="Water play activity" style="object-position: 0 0;">
+          <div class="gallery-overlay">
+            <h4>💦 Water Play Day</h4>
+            <p>Develops fine motor grip and sensory exploration</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="classroom">
+          <img src="images/gallery-collage.jpg" alt="Fruit snack time" style="object-position: 50% 0;">
+          <div class="gallery-overlay">
+            <h4>🍎 Healthy Snack Time</h4>
+            <p>Learning table manners and healthy eating habits</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="sensory">
+          <img src="images/gallery-collage.jpg" alt="Sandpit play" style="object-position: 100% 0;">
+          <div class="gallery-overlay">
+            <h4>🏖️ Sandpit Exploration</h4>
+            <p>Tactile sensory play builds imagination and motor skills</p>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="gallery-item reveal" data-category="sports">
+          <img src="images/gallery-collage.jpg" alt="Kids doing yoga" style="object-position: 0 100%;">
+          <div class="gallery-overlay">
+            <h4>🧘 Kids Yoga</h4>
+            <p>Balance, flexibility, and calm focus for young minds</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="festivals">
+          <img src="images/gallery-collage.jpg" alt="Diwali celebration" style="object-position: 50% 100%;">
+          <div class="gallery-overlay">
+            <h4>🪔 Diwali Celebration</h4>
+            <p>Cultural awareness and festive joy with friends</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="classroom">
+          <img src="images/gallery-collage.jpg" alt="Graduation ceremony" style="object-position: 100% 100%;">
+          <div class="gallery-overlay">
+            <h4>🎓 Graduation Day</h4>
+            <p>Celebrating your child's milestone achievements</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TESTIMONIALS
+       ═══════════════════════════════════════ -->
+  <section class="testimonials">
+    <div class="container text-center">
+      <span class="section-badge badge-mint">Parent Voices</span>
+      <h2 class="section-title">What Parents Say About Us</h2>
+      <p class="section-subtitle">Hear from real families who have experienced the Little Sprouts difference.</p>
+      
+      <div class="testimonials-slider">
+        <div class="testimonial-track" id="testimonialTrack">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-text">
+                "My daughter Ananya was extremely shy and used to cry every morning. Within 3 weeks at Little Sprouts, she started waking up excited to go to school. The teachers are so patient and loving. The daily WhatsApp updates with photos give me complete peace of mind at work."
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">PS</div>
+                <div class="testimonial-author-info">
+                  <strong>Priya Sharma</strong>
+                  <span>Mother of Ananya (Playgroup) &bull; ⭐ Google Review</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-text">
+                "We visited 8 schools before choosing Little Sprouts. The CCTV monitoring, sanitized classrooms, and the warm greeting at the gate made all the difference. Our son Arjun has learned more in 6 months here than we expected. Highly recommended!"
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">RK</div>
+                <div class="testimonial-author-info">
+                  <strong>Rahul & Kavita Gupta</strong>
+                  <span>Parents of Arjun (Nursery) &bull; ⭐ Google Review</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-inner">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-text">
+                "As a working mother, I needed a daycare I could trust completely. Little Sprouts is not just a school — it's a second home for my baby. The teachers remember every child's food preferences, nap schedules, and moods. This level of care is rare."
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">NJ</div>
+                <div class="testimonial-author-info">
+                  <strong>Neha Joshi</strong>
+                  <span>Mother of Vivaan (Toddlers) &bull; ⭐ Google Review</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-dots" id="testimonialDots">
+          <button class="testimonial-dot active" data-index="0"></button>
+          <button class="testimonial-dot" data-index="1"></button>
+          <button class="testimonial-dot" data-index="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ADMISSIONS SECTION
+       ═══════════════════════════════════════ -->
+  <section class="admissions" id="admissions">
+    <div class="container text-center">
+      <span class="section-badge badge-lavender">Join Our Family</span>
+      <h2 class="section-title">Simple 3-Step Admission Process</h2>
+      <p class="section-subtitle">No entrance test. No stress. Just a warm, friendly interaction to understand your child's needs.</p>
+      
+      <div class="admission-steps">
+        <div class="admission-step reveal">
+          <div class="step-number step-1">1</div>
+          <h4>Schedule a Campus Visit</h4>
+          <p>Book a tour at your convenience. Walk through our classrooms, meet teachers, and see the campus firsthand.</p>
+        </div>
+        <div class="admission-step reveal">
+          <div class="step-number step-2">2</div>
+          <h4>Parent & Child Interaction</h4>
+          <p>A relaxed, zero-pressure session where your child plays while we understand their developmental stage and your expectations.</p>
+        </div>
+        <div class="admission-step reveal">
+          <div class="step-number step-3">3</div>
+          <h4>Welcome to Little Sprouts! 🎉</h4>
+          <p>Submit basic documents, collect the welcome kit, and your child's joyful learning journey begins.</p>
+        </div>
+      </div>
+
+      <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 20px;">Age Eligibility (2026–27 Session)</h3>
+      <table class="eligibility-table">
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Age Group</th>
+            <th>Child Born Between</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>🧸 Toddlers / Daycare</strong></td>
+            <td>1.5 – 2 years</td>
+            <td>Apr 2024 – Oct 2025</td>
+            <td>3 hours/day</td>
+          </tr>
+          <tr>
+            <td><strong>🎨 Playgroup</strong></td>
+            <td>2 – 3 years</td>
+            <td>Apr 2023 – Mar 2024</td>
+            <td>3 hours/day</td>
+          </tr>
+          <tr>
+            <td><strong>✏️ Nursery</strong></td>
+            <td>3 – 4 years</td>
+            <td>Apr 2022 – Mar 2023</td>
+            <td>4 hours/day</td>
+          </tr>
+          <tr>
+            <td><strong>🎓 Junior KG</strong></td>
+            <td>4 – 5 years</td>
+            <td>Apr 2021 – Mar 2022</td>
+            <td>4.5 hours/day</td>
+          </tr>
+          <tr>
+            <td><strong>🎓 Senior KG</strong></td>
+            <td>5 – 6 years</td>
+            <td>Apr 2020 – Mar 2021</td>
+            <td>5 hours/day</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top: 30px;">
+        <h4 style="font-family: var(--font-heading); margin-bottom: 12px; color: var(--gray-700);">📋 Documents Required for Admission</h4>
+        <div style="display: inline-block; text-align: left; background: var(--cream); padding: 20px 30px; border-radius: var(--radius-md); font-size: 0.92rem; color: var(--gray-600); line-height: 2;">
+          ✅ Birth Certificate (original + photocopy)<br>
+          ✅ 4 Passport-size photographs of the child<br>
+          ✅ Aadhaar Card of child & parent (photocopy)<br>
+          ✅ Immunization / Vaccination Record<br>
+          ✅ Address Proof (Aadhaar / Electricity Bill)<br>
+          ✅ Recent medical fitness certificate (optional)
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary" onclick="openModal('tourModal'); return false;">🏫 Book a Campus Visit</a>
+        <a href="#" class="btn btn-coral" onclick="openModal('prospectusModal'); return false;">📄 Download Fee Structure & Prospectus</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT — FOUNDER / SAFETY (MINI SECTION)
+       ═══════════════════════════════════════ -->
+  <section class="why-us" style="padding: 60px 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center;">
+        <div class="reveal-left">
+          <span class="section-badge badge-sunshine">Our Promise</span>
+          <h2 class="section-title" style="font-size: 1.8rem;">A Message from Our Founder</h2>
+          <p style="color: rgba(255,255,255,0.8); font-size: 1rem; line-height: 1.8; margin-bottom: 16px;">
+            "Every child deserves a space where they feel safe, seen, and celebrated. When I started Little Sprouts, 
+            my dream was to create a school where no child is rushed, no parent is anxious, and every teacher 
+            genuinely loves what they do. We are not a factory — we are a family."
+          </p>
+          <p style="color: var(--sunshine-light); font-weight: 600; font-family: var(--font-heading);">
+            — Mrs. Sunita Devi, Founder & Principal<br>
+            <span style="color: rgba(255,255,255,0.5); font-size: 0.85rem; font-weight: 400;">B.Ed, M.A. (Early Childhood Education) • 15 years experience</span>
+          </p>
+        </div>
+        <div class="reveal-right">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="why-card" style="text-align: center; padding: 24px;">
+              <div style="font-size: 2rem; margin-bottom: 8px;">🔒</div>
+              <h4 style="font-size: 0.9rem;">Biometric Gate Security</h4>
+              <p style="font-size: 0.8rem;">Only verified parents/guardians</p>
+            </div>
+            <div class="why-card" style="text-align: center; padding: 24px;">
+              <div style="font-size: 2rem; margin-bottom: 8px;">🧹</div>
+              <h4 style="font-size: 0.9rem;">Daily Disinfection</h4>
+              <p style="font-size: 0.8rem;">Medical-grade sanitization</p>
+            </div>
+            <div class="why-card" style="text-align: center; padding: 24px;">
+              <div style="font-size: 2rem; margin-bottom: 8px;">🚑</div>
+              <h4 style="font-size: 0.9rem;">Pediatric Hospital Tie-up</h4>
+              <p style="font-size: 0.8rem;">5-minute emergency response</p>
+            </div>
+            <div class="why-card" style="text-align: center; padding: 24px;">
+              <div style="font-size: 2rem; margin-bottom: 8px;">🚐</div>
+              <h4 style="font-size: 0.9rem;">GPS-Tracked School Van</h4>
+              <p style="font-size: 0.8rem;">Safe pick-up & drop service</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT & TOUR BOOKING
+       ═══════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container text-center">
+      <span class="section-badge badge-sky">Get in Touch</span>
+      <h2 class="section-title">Visit Our Campus</h2>
+      <p class="section-subtitle">We'd love to meet you and your little one. Schedule a tour or reach out with any questions.</p>
+    </div>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-form-card reveal-left">
+          <h3>📅 Schedule a Campus Tour</h3>
+          <p class="form-subtitle">Pick a date and time that works best for your family.</p>
+          <form id="tourForm" onsubmit="submitTourForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Parent's Name *</label>
+                <input type="text" placeholder="e.g., Priya Sharma" required>
+              </div>
+              <div class="form-group">
+                <label>WhatsApp Number *</label>
+                <input type="tel" placeholder="e.g., 9876543210" maxlength="10" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Child's Name</label>
+                <input type="text" placeholder="e.g., Ananya">
+              </div>
+              <div class="form-group">
+                <label>Child's Age</label>
+                <select>
+                  <option value="" disabled selected>Select age group</option>
+                  <option>1.5–2 years (Toddlers)</option>
+                  <option>2–3 years (Playgroup)</option>
+                  <option>3–4 years (Nursery)</option>
+                  <option>4–5 years (Junior KG)</option>
+                  <option>5–6 years (Senior KG)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Preferred Visit Date *</label>
+                <input type="date" required>
+              </div>
+              <div class="form-group">
+                <label>Preferred Time Slot</label>
+                <select>
+                  <option value="" disabled selected>Select time</option>
+                  <option>Morning (9:00 AM – 11:00 AM)</option>
+                  <option>Afternoon (12:00 PM – 2:00 PM)</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 8px;">
+              ✅ Confirm My Visit
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-info-card reveal-right">
+          <div class="info-item">
+            <div class="info-icon" style="background: var(--sunshine-light);">📍</div>
+            <div>
+              <h4>Our Campus</h4>
+              <p>123, Green Valley Road, Near City Park,<br>Ranchi, Jharkhand – 834001</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon" style="background: var(--sky-light);">📞</div>
+            <div>
+              <h4>Call Principal Directly</h4>
+              <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon" style="background: var(--mint-light);">💬</div>
+            <div>
+              <h4>WhatsApp Us</h4>
+              <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20know%20about%20admission%20at%20Little%20Sprouts." target="_blank">Chat on WhatsApp →</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon" style="background: var(--lavender-light);">🕐</div>
+            <div>
+              <h4>School Hours</h4>
+              <p>Mon – Sat: 9:00 AM – 1:00 PM<br>Office: 9:00 AM – 4:00 PM</p>
+            </div>
+          </div>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.123456789!2d85.3300!3d23.3500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDIxJzAwLjAiTiA4NcKwMTknNDguMCJF!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" title="Little Sprouts Campus Location"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">🌱 Little <span>Sprouts</span> International</div>
+          <p>A warm, nurturing early learning center where every child is seen, loved, and celebrated. Building curious minds since 2018.</p>
+          <div class="footer-social">
+            <a href="#" title="Facebook">📘</a>
+            <a href="#" title="Instagram">📸</a>
+            <a href="#" title="YouTube">▶️</a>
+            <a href="#" title="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="#programs">Toddlers / Daycare</a></li>
+            <li><a href="#programs">Playgroup</a></li>
+            <li><a href="#programs">Nursery</a></li>
+            <li><a href="#programs">Junior & Senior KG</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#daily-routine">Daily Routine</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+            <li><a href="mailto:info@littlesprouts.edu.in">📧 info@littlesprouts.edu.in</a></li>
+            <li><a href="#contact">📍 Ranchi, Jharkhand</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Little Sprouts International Early Learning. All rights reserved. | Made with ❤️ for little learners</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       FLOATING WHATSAPP BUTTON
+       ═══════════════════════════════════════ -->
+  <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20know%20about%20admission%20at%20Little%20Sprouts." class="whatsapp-float" target="_blank">
+    <span class="wa-label">Chat with us!</span>
+    <span class="wa-btn">💬</span>
+  </a>
+
+  <!-- ═══════════════════════════════════════
+       MOBILE BOTTOM BAR
+       ═══════════════════════════════════════ -->
+  <div class="mobile-bar">
+    <div class="mobile-bar-inner">
+      <a href="tel:+919876543210" class="btn btn-sky">📞 Call Now</a>
+      <a href="https://wa.me/919876543210" class="btn btn-primary" target="_blank">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       MODALS
+       ═══════════════════════════════════════ -->
+  
+  <!-- Tour Booking Modal -->
+  <div class="modal-overlay" id="tourModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('tourModal')">&times;</button>
+      <div id="tourModalForm">
+        <h3>🏫 Book a Campus Visit</h3>
+        <p class="modal-subtitle">Schedule a personal tour. We'll confirm within 2 hours on WhatsApp.</p>
+        <form onsubmit="handleModalSubmit(event, 'tourModal')">
+          <div class="form-group">
+            <label>Parent's Name *</label>
+            <input type="text" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label>WhatsApp Number *</label>
+            <input type="tel" placeholder="10-digit mobile number" maxlength="10" required>
+          </div>
+          <div class="form-group">
+            <label>Child's Age Group</label>
+            <select>
+              <option value="" disabled selected>Select program</option>
+              <option>Toddlers (1.5–2 yrs)</option>
+              <option>Playgroup (2–3 yrs)</option>
+              <option>Nursery (3–4 yrs)</option>
+              <option>Junior KG (4–5 yrs)</option>
+              <option>Senior KG (5–6 yrs)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Preferred Visit Date</label>
+            <input type="date">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Confirm My Visit ✅
+          </button>
+        </form>
+      </div>
+      <div class="modal-success" id="tourModalSuccess">
+        <div class="success-icon">🎉</div>
+        <h4>Visit Booked Successfully!</h4>
+        <p>We'll confirm your slot within 2 hours on WhatsApp. See you soon!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prospectus Download Modal -->
+  <div class="modal-overlay" id="prospectusModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('prospectusModal')">&times;</button>
+      <div id="prospectusModalForm">
+        <h3>📄 Download Prospectus & Fee Structure</h3>
+        <p class="modal-subtitle">Enter your details and we'll send the complete prospectus to your WhatsApp instantly.</p>
+        <form onsubmit="handleModalSubmit(event, 'prospectusModal')">
+          <div class="form-group">
+            <label>Parent's Name *</label>
+            <input type="text" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label>WhatsApp Number *</label>
+            <input type="tel" placeholder="10-digit mobile number" maxlength="10" required>
+          </div>
+          <div class="form-group">
+            <label>Child's Date of Birth</label>
+            <input type="date">
+          </div>
+          <button type="submit" class="btn btn-coral" style="width: 100%; justify-content: center;">
+            Download Prospectus 📥
+          </button>
+        </form>
+      </div>
+      <div class="modal-success" id="prospectusModalSuccess">
+        <div class="success-icon">📬</div>
+        <h4>Prospectus Sent!</h4>
+        <p>Check your WhatsApp in the next few minutes. We've also sent the fee details.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       JAVASCRIPT
+       ═══════════════════════════════════════ -->
+  <script src="js/main.js"></script>
+</body>
+</html>
