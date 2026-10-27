@@ -872,6 +872,65 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
 }
 
+/* ── Founder & Safety Sub-Grid ── */
+.founder-safety-section {
+  padding: 60px 0;
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.founder-quote {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.founder-meta {
+  color: var(--sunshine-light);
+  font-weight: 600;
+  font-family: var(--font-heading);
+  line-height: 1.5;
+}
+
+.founder-credentials {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.85rem;
+  font-weight: 400;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.founder-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.founder-cards-grid .why-card {
+  text-align: center;
+  padding: 24px 18px;
+}
+
+.founder-cards-grid .why-card-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.founder-cards-grid .why-card h4 {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.founder-cards-grid .why-card p {
+  font-size: 0.82rem;
+}
+
 /* ══════════════════════════════════════
    DAILY ROUTINE TIMELINE
    ══════════════════════════════════════ */
@@ -1252,14 +1311,35 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
-/* Age Eligibility Table */
+/* Age Eligibility Table & Documents */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 30px;
+  border-radius: var(--radius-md);
+}
+
+.docs-checklist {
+  display: inline-block;
+  text-align: left;
+  background: var(--cream);
+  padding: 20px 28px;
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  color: var(--gray-600);
+  line-height: 2;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .eligibility-table {
   width: 100%;
+  min-width: 500px;
   border-collapse: collapse;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  margin-bottom: 40px;
 }
 
 .eligibility-table thead {
@@ -1772,6 +1852,12 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1821,6 +1907,21 @@ h1, h2, h3, h4, h5, h6 {
 
   .why-grid {
     grid-template-columns: 1fr;
+  }
+
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .founder-cards-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .founder-cards-grid .why-card {
+    padding: 18px 12px;
   }
 
   .gallery-grid {
@@ -1890,7 +1991,47 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
 
+  .founder-cards-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .founder-cards-grid .why-card {
+    padding: 14px 8px;
+  }
+
+  .founder-cards-grid .why-card h4 {
+    font-size: 0.85rem;
+  }
+
+  .founder-cards-grid .why-card p {
+    font-size: 0.74rem;
+  }
+
   .hero h1 {
     font-size: 1.7rem;
+  }
+
+  .timeline::before {
+    left: 23px;
+  }
+
+  .timeline-item {
+    gap: 14px;
+  }
+
+  .timeline-dot {
+    width: 46px;
+    height: 46px;
+    font-size: 1.1rem;
+  }
+
+  .timeline-content {
+    padding: 16px;
+  }
+
+  .docs-checklist {
+    padding: 16px 18px;
+    font-size: 0.85rem;
   }
 }
